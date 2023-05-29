@@ -3,3 +3,189 @@ Paleta
 Verde: #49a09d
 Lilás: #5f2c82
 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #5f2c82;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  background-color: white;
+  width: 250px;
+  border-radius: 20px;
+}
+
+#image {
+  background: url("../img/bridge.jpg") center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 200px;
+  border-radius: 20px 20px 0 0;
+}
+
+#form-section {
+  padding: 10px;
+}
+
+#form-section > h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#form-section p {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.email-container {
+  display: flex;
+  align-items: center;
+  background-color: #5f2c82;
+  border-radius: 10px;
+  height: 42px;
+  padding: 3px;
+}
+
+.email-container img {
+  height: 40px;
+}
+
+#email {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #aae4e2;
+}
+
+#email:focus {
+  background-color: white;
+}
+
+#email:not(:placeholder-shown):not(:focus) {
+  background-color: #e7fcfb;
+}
+
+.password-container {
+  display: flex;
+  align-items: center;
+  background-color: #5f2c82;
+  height: 42px;
+  border-radius: 10px;
+  padding: 3px;
+}
+
+.password-container img {
+  height: 38px;
+}
+
+#password {
+  width: 100%;
+  height: 100%;
+  margin-left: 2px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #aae4e2;
+}
+
+#password:focus {
+  background-color: white;
+}
+
+#password:not(:placeholder-shown):not(:focus) {
+  background-color: #e7fcfb;
+}
+
+.submit-button {
+  background-color: #49a09d;
+  color: white;
+  border: none;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: hsl(178, 37%, 36%);
+}
+
+.forget-password {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: #49a09d;
+  border: 1px solid #49a09d;
+  height: 40px;
+  gap: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.forget-password svg {
+  fill: #49a09d;
+}
+
+.forget-password:hover {
+  background-color: #49a09d;
+  color: white;
+}
+
+.forget-password:hover svg {
+  fill: white;
+}
+
+@media screen and (min-width: 769px) {
+  body {
+    background-image: linear-gradient(to bottom, #5f2c82, #49a09d);
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    width: 900px;
+    margin: 100px;
+  }
+
+  #image {
+    height: auto;
+    border-radius: 20px 0 0 20px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+    width: 1200px;
+  }
+
+  #image {
+    border-radius: 0 20px 20px 0;
+    order: 2;
+  }
+}
