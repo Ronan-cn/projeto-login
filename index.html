@@ -15,18 +15,16 @@
         <h1>Login</h1>
         <p>Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente.</p>
         <form action="login.php" method="post">
-          <div class="email-container">
-            <label for="email"><img src="./img/person-icon.svg" alt="" /></label>
-            <input type="email" name="email" id="email" placeholder="Seu email" maxlength="50" required />
+          <div class="input-container">
+            <label for="email"><span class="material-icons">person</span></label>
+            <input type="email" name="email" id="email" placeholder="Seu email" autocomplete="email" maxlength="50" required />
           </div>
-          <div class="password-container">
-            <label for="password"><img src="./img/key-icon.svg" alt="" /></label>
-            <input type="password" name="password" id="password" placeholder="Sua senha" minlength="8" maxlength="16" required />
+          <div class="input-container">
+            <label for="password"><span class="material-icons">vpn_key</span></label>
+            <input type="password" name="password" id="password" placeholder="Sua senha" autocomplete="current-password" minlength="8" maxlength="16" required />
           </div>
           <input class="submit-button" type="submit" value="Entrar" />
-          <button class="forget-password">
-            Esqueci a senha <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M168-192q-29 0-50.5-21.5T96-264v-432q0-29 21.5-50.5T168-768h624q30 0 51 21.5t21 50.5v432q0 29-21 50.5T792-192H168Zm312-240 312-179v-85L480-517 168-696v85l312 179Z" /></svg>
-          </button>
+          <a href="#" class="forget-password">Esqueci a senha <span class="material-icons">email</span></a>
         </form>
       </section>
     </main>
